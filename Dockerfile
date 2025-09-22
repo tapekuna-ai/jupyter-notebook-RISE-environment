@@ -19,6 +19,7 @@ RUN apt install -y python3.10 python3.10-venv python3.10-dev python3-pip
 
 RUN pip3 install notebook==6.1.5
 
+RUN pip install jsonschema[format]
 RUN pip3 install jupyter_contrib_nbextensions==0.5.1
 RUN jupyter contrib nbextension install
 RUN jupyter contrib nbextension install
