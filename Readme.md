@@ -1,6 +1,10 @@
-# Environment to build jupyter RISE slides
+# Reproducible Jupyter RISE presentation environment
 
-In this repo, you find a RISE template consisting of 
+Build interactive Reveal.js slide decks from Jupyter notebooks with a ready-to-use RISE environment for Docker or Vagrant. This reusable template is intended for teachers, lecturers, workshops, and technical presentations that combine executable Python with slides.
+
+## Included presentation features
+
+The example RISE notebook includes:
 
 * two columns
 * lists
@@ -11,7 +15,17 @@ In this repo, you find a RISE template consisting of
 * hidden input cells
 * highlights
 
-Please find more slide examples at [my lecture notes repo](https://github.com/thomasliebig/jupyterlite)
+For complete teaching examples, see the [public interactive lecture notes](https://github.com/tapekuna-ai/public-lecture-notes-tapkuna.ai). For a modern, browser-only JupyterLite alternative, see [RISE Lite](https://github.com/thomasliebig/RISE-lite).
+
+## Quick start with Docker
+
+```bash
+git clone https://github.com/tapekuna-ai/jupyter-notebook-RISE-environment.git
+cd jupyter-notebook-RISE-environment
+docker-compose up -d
+```
+
+Open <http://localhost:8000/notebooks/Template.ipynb> and start adapting the presentation template.
 
 ## Starting with Vagrant
 
@@ -49,7 +63,7 @@ vagrant halt
 vagrant provision
 ```
 
-## Starting with Docker
+## Docker details
 
 This repo includes a Dockerfile, wich builds the image to run jupyter notebook with all slide extensions described earlier. Additionally, it contains a `docker-compose.yml` file, which allows easy starting and stopping of the container.
 
